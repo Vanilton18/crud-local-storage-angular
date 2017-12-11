@@ -1,0 +1,8 @@
+<h1>Utilizando Services e ngModel</h1>
+
+<label for="">
+  <input type="text" [(ngModel)]='nome' #ctrl='ngModel'></label>
+
+  <p>Nome digitado: {{nome}}</p>
+
+  <button (click)='mudarNome()'>Mudar Nome</button>

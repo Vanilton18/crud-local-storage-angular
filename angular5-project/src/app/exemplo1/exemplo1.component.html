@@ -1,0 +1,32 @@
+<h1>Olá eu sou, {{pessoa.name}} uma template</h1>
+<button (click)=dizerOi()>
+Me clique
+</button>
+<hr>
+<h2>Minhas frutas prediletas</h2>
+<ul>
+  <li *ngFor='let fruta of frutas'>{{fruta}}</li>
+</ul>
+
+<div *ngIf='frutas'>{{frutas | json}}</div>
+<hr>
+<div *ngIf='comidasSaudaveis; else erro '>{{ comidasSaudaveis | json}}</div>
+<br>
+<div *ngIf='comidasSaudaveis; then erro else sucess '>{{ comidasSaudaveis | json}}</div>
+
+<ng-template #sucess>
+Comendo bem
+</ng-template>
+<ng-template #erro>
+Não tem comida saudaveis  
+</ng-template>
+
+<hr>
+
+<button (click)='listaNumeros()'>Gerar numeros aleatorios</button>
+
+<ul *ngFor='let num of numbers'>
+  <li>{{num}} - <span *ngIf='num % 2 === 0; then par else impar'></span></li>
+  <ng-template #par>Par</ng-template>
+  <ng-template #impar>Impar</ng-template>
+</ul>
