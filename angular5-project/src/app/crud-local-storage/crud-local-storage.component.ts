@@ -16,7 +16,8 @@ export class CrudLocalStorageComponent implements OnInit {
   pessoa = {
     id: '',
     name: '',
-    email: ''
+    email: '',
+    photo: ''
   };
 
   // TODO filter
@@ -41,7 +42,8 @@ export class CrudLocalStorageComponent implements OnInit {
       this.pessoa = {
         id: '',
         name: '',
-        email: ''
+        email: '',
+        photo: ''
       };
     } else {
       this.update(this.pessoa.id);
@@ -49,7 +51,8 @@ export class CrudLocalStorageComponent implements OnInit {
       this.pessoa = {
         id: '',
         name: '',
-        email: ''
+        email: '',
+        photo: ''
       };
     }
   }
@@ -60,6 +63,7 @@ export class CrudLocalStorageComponent implements OnInit {
       if (usersTemp[index].id === id) {
         usersTemp[index].name = this.pessoa.name;
         usersTemp[index].email = this.pessoa.email;
+        usersTemp[index].photo = this.pessoa.photo;
       }
     }
     this.storage.store('pessoa', usersTemp);
@@ -108,7 +112,8 @@ export class CrudLocalStorageComponent implements OnInit {
     this.pessoa = {
       id: '',
       name: '',
-      email: ''
+      email: '',
+      photo: ''
     };
 
   }

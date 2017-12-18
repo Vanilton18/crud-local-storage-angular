@@ -13,6 +13,7 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Exemplo4Component } from './exemplo4/exemplo4.component';
 import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     NgbModule.forRoot(),
     Ng2Webstorage,
+    BrowserAnimationsModule,
     ToastrModule.forRoot(
       {closeButton: true,
        progressBar: true,

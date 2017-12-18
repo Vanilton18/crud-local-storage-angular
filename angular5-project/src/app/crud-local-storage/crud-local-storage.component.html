@@ -9,10 +9,16 @@
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Endereço de Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" required name="email" [(ngModel)]="pessoa.email" aria-describedby="emailHelp" placeholder="Digite um email">
+      <input type="email" require class="form-control" id="exampleInputEmail1" required name="email" [(ngModel)]="pessoa.email" aria-describedby="emailHelp" placeholder="Digite um email">
       <small id="emailHelp" class="form-text text-muted">Não compartilhe seus dados com qualquer pessoa.</small>
 
     </div>
+    <div class="form-group">
+        <label for="exampleInputPhoto">URL Foto</label>
+        <input type="text"  class="form-control" id="exampleInputFoto" required name="photo" [(ngModel)]="pessoa.photo" aria-describedby="photoHelp" placeholder="Digite/Cole aqui a URL de sua Foto">
+        <small id="photoHelp" class="form-text text-muted">Deve ser uma URL aberta</small>
+  
+      </div>
     <button type="submit" class="btn btn-primary">Save</button>
     <button type="button" class="btn btn-danger" (click)="deleteAll()">Apagar Todas Pessoas</button>
   </form>
@@ -46,6 +52,8 @@
     <div class="row">
       <div class="col-md-6" *ngFor="let pessoa of list()" style="padding: 10px;">
         <div class="card">
+            
+            <img class="card-img-top" style= 'width: 30%;' src="{{pessoa.photo !== '' ? pessoa.photo : 'https://st3.depositphotos.com/4111759/13425/v/450/depositphotos_134255634-stock-illustration-avatar-icon-male-profile-gray.jpg'}}" alt="Card image cap">            
           <div class="card-block">
             <h3 class="card-title">
               <span style="margin-left: 10px; font-weight: 900; margin-right: 2px;">#</span>{{pessoa.id}}</h3>
