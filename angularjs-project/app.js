@@ -26,7 +26,7 @@ app.controller("Controller", function ($scope, $localStorage) {
 
     vm.edit = function (id) {
         var usersTemp = $localStorage.userData;
-        for (let index = 0; index < usersTemp.length; index++) {
+        for (var index = 0; index < usersTemp.length; index++) {
             if (usersTemp[index].id === id) {
                 $scope.user = usersTemp[index];
             }
@@ -35,7 +35,7 @@ app.controller("Controller", function ($scope, $localStorage) {
 
     vm.update = function (id) {
         var usersTemp = $localStorage.userData;
-        for (let index = 0; index < usersTemp.length; index++) {
+        for (var index = 0; index < usersTemp.length; index++) {
             if (usersTemp[index].id === id) {
                 usersTemp[index].name = $scope.user.name;
                 usersTemp[index].email = $scope.user.email;
@@ -47,7 +47,7 @@ app.controller("Controller", function ($scope, $localStorage) {
 
     vm.remove = function (id) {
         var usersTemp = $localStorage.userData;
-        for (let index = 0; index < usersTemp.length; index++) {
+        for (var index = 0; index < usersTemp.length; index++) {
             if (usersTemp[index].id === id) {
                 if (window.confirm("Deseja realmente remover o " + usersTemp[index].name + " ?") == true) {
                     usersTemp.splice(index, 1);
