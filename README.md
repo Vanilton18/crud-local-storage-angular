@@ -12,3 +12,7 @@ Pré-condições
 Execução
 
 1. Executar na pasta raiz do projeto (ng serve)
+
+App On GitHub Pages
+
+https://vanilton18.github.io/crud-local-storage-angular/
